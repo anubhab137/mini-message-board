@@ -25,9 +25,7 @@ router.get('/', function(req, res, next) {
 
 router.post('/new',(req,res,next)=>{
   
-  messages.push({text: req.body.Message, user: req.body.Name, 'added': new Date()});
-  console.log(req.baseUrl);
-  console.log(req.path);
+  messages.push({text: req.body.Message, user: req.body.Name, added: new Date()});
   res.redirect('/');
 });
 
